@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title> Lily Grant Lab 4</title>
+        <link rel="stylesheet" href="Grant_Lab4.css">
+    </head>
+
+    <body>
+        <!-- Header Section -->
+        <header id="header">
+            <h1> Welcome to Lily's Lab #4</h1>
+         </header>
+
+         <!-- Bulk of Webpage -->
+         <div class="boxes">
+            <div class="content-box">
+                <h2>Alert Me!</h2>
+                <form name="contactform" onsubmit="return formValidation()">
+                    <label for="first">First Name:</label>
+                    <input type="text" placeholder="type here" id="first" required>
+                    <br>
+                    <button type="submit">Alert Me!</button>
+                </form>
+        
+                <!-- Javascript -->
+                 <script type="text/javascript">
+                    function formValidation() {
+                        console.log("validating user input:", document.contactform.first.value)
+                        alert("Hi " + document.contactform.first.value + "!") 
+                    }
+                 </script>
+                <br>
+
+            </div>
+
+            <!-- color change section -->
+            <div class="content-box">
+                <h2 id = "button"> I should change color...</h2>
+                    <button onclick="changecolor()"> Change Color!</button>
+                        <!-- javascript code -->
+                        <script type="text/javascript">
+                            function changecolor() {
+                                document.body.style.backgroundColor = document.body.style.backgroundColor === 'white' ? 'black' : 'white';
+                            }
+                            console.log("Hopefully, successfully changing background color to: " , document.body.style.backgroundColor)
+                        </script>
+
+            </div>
+
+            <!-- text tester section -->
+            <aside class="content-box">
+                <h2>Text Tester Section</h2>
+                <form onsubmit="validateText()">
+                    <input type="text" id="text" placeholder="Try me">
+                    <button type="submit">Validate Text</button>
+
+                    <!-- javascript -->
+                    <script type="text/javascript">
+                        function validateText() {
+                            console.log("Validating the inputted text...")
+                            var validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                            if (validationRegex.test(document.getElementById("text").value)) {
+                                alert("Please use normal characters :3")
+                                return false;
+                            }
+                             return true;
+                        }
+
+                    </script>
+                </form>
+            </aside>
+
+            <!-- add text section -->
+            <aside class="content-box">
+                <h2 id = "button"> I guess you can add text?</h2>
+                    <button onclick="addtext()"> Add Text!</button>
+                        <!-- javascript code -->
+                        <script type="text/javascript">
+                            function addtext() {
+                                var heading = document.querySelector("#header h1");
+                                heading.innerHTML += " Add Text";
+                            }
+                        </script>
+            </aside>
+
+         </div>
+
+    </body>
+
+</html>

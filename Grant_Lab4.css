@@ -1,0 +1,28 @@
+#header {
+    text-align: center;
+    background-color: rgb(146, 172, 146);
+    padding: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20 px;
+    clear: both;
+}
+
+#boxes {
+    text-align: center;
+    background-color: rgb(168, 185, 157);
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+}
+
+.content-box {
+    background-color: rgb(4, 56, 22);
+    color: rgb(179, 246, 214);
+    border: 3px solid black;
+    padding: 5px;
+    border-radius: 15px;
+    margin: 5px;
+    text-align: center;
+    width: 100%;
+}
