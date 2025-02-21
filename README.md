@@ -4,3 +4,4 @@
 # Name (Please Input your name):
 Lily Grant
 # Comments: 
+I struggled with javascript... this was ~difficult~
